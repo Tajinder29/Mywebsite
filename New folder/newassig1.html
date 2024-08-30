@@ -1,0 +1,609 @@
+<!--  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion portal</title>
+    <link rel="stylesheet" href="ass1.css">
+     <script src="index.js"></script> -->
+<!-- </head>
+<body>
+
+    <div id="discussion">
+        <h1 id="l">Discussion Portal</h1>
+    </div>
+    <div id="container">
+         <h1 id="l">Discussion portal</h1> -->
+        <!-- <div id="bottom">
+        <div id="a">
+            <div id="c">
+                <button id="d">New Question Form</button><button id="e">Search Questions.....</button>
+            </div>
+             <ul id="list">
+            <li id="li1">
+                <p id="pi"></p><h1 id="hi"></h1>
+            </li>
+            </ul> 
+        </div>
+
+            <div id="f">
+                <div id="mid"><p id="g">Welcome to Discussion portal !</p><br> -->
+                <!-- <p id="h">Enter a subject and question to get started</p> <br><br>
+           <input type="text" id="i" placeholder="Enter Subject...."><br><br>
+           
+           <textarea id="j" placeholder="Enter Questions....." ></textarea>
+       <input type="submit" id="k" ></div>
+       <div id="f1">
+        <p id="p2"></p>
+        <div id="i1"><p id="pin"></p><h1 id="hea"></h1></div>
+        <button id="button"></button>
+
+        <p id="p"></p>
+    <div id="divi">
+        <ul id="u">
+            <li id="li">
+                <h1 id="h1"></h1>
+                <h2 id="h2"></h2>
+            </li>
+        </ul>
+    </div>
+    <p id="para"></p>
+    <input type="text" id="in">
+    <textarea id="com"></textarea>
+    <button id="s"></button>
+       </div>
+       </div>
+       
+    </div>
+    </div>
+    
+</body>
+<script>
+
+ let arr=[];
+
+    function addLocalItem(arr){
+return (localStorage.setItem("data",JSON.stringify(arr)));
+    }
+ -->
+
+    <!-- let btn=document.querySelector("#d");
+    let visi=document.querySelector("#mid");
+    btn.addEventListener("click",function(){
+        visi.style.visibility="visible";
+    })
+    
+    let k=document.getElementById("k");
+    k.addEventListener("click",function(){//submit
+
+        let i=document.getElementById("i");
+    let j=document.getElementById("j");
+
+
+    let obj={
+    id:1,
+    subject:i.value,
+    text:j.value,
+    response : []
+    };
+    arr.push(obj);
+    addLocalItem(arr);
+
+    let m=document.getElementById("list");
+    let n=document.getElementById("li1");
+    n.setAttribute("id","n");
+    m.appendChild(n);
+    let q=document.getElementById("pi");
+
+    let q1=document.getElementById("he");
+        q1.style.textAlign="center";
+        let a=document.querySelector("#i");
+        let b=document.querySelector("#j");
+        n.appendChild(q1);
+        n.appendChild(q);
+        q1.innerText=a.value;
+        q.innerText=b.value;
+    })
+
+
+//     func(obj);
+//    })
+
+
+
+
+     
+
+
+
+
+    let per=document.querySelector("#list");
+    per.addEventListener("click",function(){
+        // console.log("SDFSD");
+        visi.style.display="none";
+let qu=document.getElementById("f1");
+let g=document.getElementById("p2");
+g.style.fontSize="30px";
+qu.appendChild(g);
+g.innerText="Question";
+let para=document.getElementById("f1");
+let a3=document.getElementById("i1");
+a3.style.backgroundColor="#008080";
+a3.style.width="700px";
+a3.style.height="90px";
+para.appendChild(a3);
+let l=document.getElementById("p");
+ let l1=document.getElementById("h1");
+ 
+ a3.appendChild(l1);
+ a3.appendChild(l);
+
+ let a=document.querySelector("#i");
+
+ let b=document.querySelector("#j");
+l1.innerText=a.value;
+l1.style.backgroundColor="#008080";
+
+l.innerText=b.value;
+let bt=document.getElementById("button");
+bt.innerText="Resolve";
+bt.style.marginLeft="580px";
+bt.style.marginTop="50px";
+bt.style.padding="10px";
+para.appendChild(bt);
+
+let re=document.getElementById("p");//change
+qu.appendChild(re);
+re.innerText="Response";
+re.style.fontSize="30px";
+re.style.display = "none";
+
+let rdiv=document.getElementById("divi")//response change
+qu.appendChild(rdiv);
+rdiv.style.overflow="auto";
+rdiv.style.borderBottomColor="white";
+rdiv.style.borderBottom="10px";
+rdiv.style.backgroundColor="#008080";
+rdiv.style.width="700px";
+rdiv.style.height="90px";
+rdiv.style.display = "none";
+
+let listR = document.getElementById('u');//ch
+rdiv.appendChild(listR);
+
+
+
+
+let para1=document.getElementById("para");//add response change
+qu.appendChild(para1);
+para1.innerText="Add Response";
+para1.style.marginTop="50px";
+para1.style.fontSize="40px";
+para1.style.fontWeight="7px";
+let inpu=document.getElementById("in");
+qu.appendChild(inpu);
+inpu.placeholder="Enter Name";
+inpu.style.padding="10px";
+
+let mbr=document.createElement("br");
+qu.appendChild(mbr);
+let m2br=document.createElement("br");
+qu.appendChild(m2br);
+
+let tex=document.getElementById("com");
+qu.appendChild(tex);
+tex.placeholder="Enter Comment";
+tex.style.height="250px";
+tex.style.width="950px";
+
+let sub=document.getElementById("s");
+qu.appendChild(sub);
+ let m3br=document.createElement("br");
+qu.appendChild(m3br);
+
+
+sub.innerText="submit";
+sub.style.padding="10px";
+
+s.addEventListener("click",function(){
+
+    re.style.display = "block";
+    rdiv.style.display = "block";
+
+    let itemR = document.getElementById('li');
+    listR.appendChild(itemR);
+
+    itemR.style.backgroundColor = "yellow";
+    itemR.style.marginBottom = "20px";
+    itemR.style.color = "black";
+
+    let a4=document.querySelector("#in");
+    let a5=document.querySelector("#com");
+    let hello=document.getElementById("h1");
+
+    let hello1=document.getElementById("h2");
+    // rdiv.appendChild(hello);//append in response box
+    // rdiv.appendChild(hello1);
+    hello.innerText=a4.value;
+    hello1.innerText=a5.value;
+
+    itemR.appendChild(hello);
+    itemR.appendChild(hello1);
+
+
+    a4.value = "";
+    a5.value = "";
+
+})
+    })
+
+    window.onload=function(){
+
+// console.log("Sdfsdf")
+arr=JSON.parse(localStorage.getItem("data")) ||[];
+arr.forEach(element => {
+
+    let m=document.getElementById("list");
+    let n=document.getElementById("li1");
+    n.setAttribute("id","n");
+    m.appendChild(n);
+    let q=document.getElementById("pi");
+
+    let q1=document.getElementById("he");
+    q1.style.textAlign="center";
+    let a=document.querySelector("#i");
+    let b=document.querySelector("#j");
+    n.appendChild(q1);
+    n.appendChild(q);
+    q1.innerText=element.subject;
+    q.innerText=element.text;
+});
+}
+
+
+</script>
+</html> --> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion</title>
+    <link rel="stylesheet" href="ass1.css">
+</head>
+
+<body>
+    <div id="Discussion">
+        <h1 id="l">Discussion portal</h1>
+    </div>
+    <div id="container">
+        <div id="bottom">
+            <div id="a">
+                <div id="c">
+                    <button id="d">New Question Form</button><button id="e">Search Questions.....</button>
+                </div>
+                <ul id="list">
+
+                </ul>
+            </div>
+            <div id="f">
+                <div id="mid">
+                    <p id="g">Welcome to Discussion portal !</p><br>
+                    <p id="h">Enter a subject and question to get started</p><br><br>
+                    <input type="text" id="i" placeholder="Enter Subject...."><br><br>
+                    <textarea id="j" placeholder="Enter Questions....."></textarea>
+                    <input type="submit" id="k">
+                    
+                </div>
+                <div id="f1">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let arr = [];
+    let count=localStorage.getItem("count")||"0";
+    function setItem(count){
+        return (localStorage.setItem("count",count ));
+    }
+    let a = document.querySelector("#i");
+
+let b = document.querySelector("#j");
+
+// // let a4 = document.querySelector("#in");
+//             let a5 = document.querySelector("#com");
+
+    function addLocalItem(arr) {
+        return (localStorage.setItem("data", JSON.stringify(arr)));
+    }
+
+    
+    let btn = document.querySelector("#d");
+    let visi = document.querySelector("#mid");
+    btn.addEventListener("click", function () {
+        visi.style.visibility = "visible";
+        visi.style.display = "block";
+        document.getElementById("f1").style.display = "none";
+
+    })
+
+    let k = document.getElementById("k");
+    k.addEventListener("click", function () {//submit
+        let i = document.getElementById("i");
+        let j = document.getElementById("j");
+        if (i.value === "" || j.value === "") {
+            alert("fill all input box");
+        }
+        else {
+            let obj = {
+                id: count,
+                subject: i.value,
+                text: j.value,
+                response: []
+            };
+            count++;
+            setItem(count);
+            
+            arr.push(obj);
+            addLocalItem(arr);
+          
+            let m = document.getElementById("list");
+            let n = document.createElement("li");
+
+            n.setAttribute("id", count);
+           n.setAttribute("class","n");
+
+            m.appendChild(n);
+            let q = document.createElement("p");
+
+            let q1 = document.createElement("h1");
+            q1.style.textAlign = "center";
+            let a = document.querySelector("#i");
+            let b = document.querySelector("#j");
+            n.appendChild(q1);
+            n.appendChild(q);
+            q1.innerText = a.value;
+            q.innerText = b.value;
+        }
+    })
+    let per = document.querySelector("#list");
+    let uniqueId=null;
+    per.addEventListener("click", function (event) {
+        visi.style.display = "none";
+        console.log(event.target.parentNode.id);
+
+        if(event.target.parentNode.tagName=="LI" && event.target.parentNode.classList.contains("n")){
+            document.getElementById("f1").innerHTML="";
+            uniqueId=event.target.parentNode.id;
+            
+            let subh1 = event.target.parentNode.childNodes[0].innerText;
+            let subp = event.target.parentNode.childNodes[1].innerText;
+            console.log(subh1,subp);
+
+            let res = JSON.parse(localStorage.getItem("data"));
+
+            res.forEach(element =>
+                {
+                    if(element.id == uniqueId)
+                {
+                    if(element.response.length == 0)
+                {
+                    //display none dena hai response or uske dabbe ko
+                    if(re!=null){
+                   re.style.display = "none";
+            rdiv.style.display = "none";
+                    }
+                }
+                    element.response.forEach(item =>
+                        {
+                            console.log(item)
+                            if(re!=null){
+                           re.style.display = "block";
+           rdiv.style.display = "block";
+                            }
+                            let itemR = document.createElement('li');
+                            console.log(listR)
+            if(listR!=null){
+                console.log(listR,"zfds")
+                            listR.appendChild(itemR);
+            itemR.style.backgroundColor = "yellow";
+            itemR.style.marginBottom = "20px";
+            itemR.style.color = "black";
+            // let a4 = document.querySelector("#in");
+            // let a5 = document.querySelector("#com");
+            let hello = document.createElement("h1");
+
+            let hello1 = document.createElement("h2");
+            hello.innerText = item.name;
+            hello1.innerText = item.comment;
+
+            itemR.appendChild(hello);
+            itemR.appendChild(hello1);
+            
+            //saveResponses(inpu.value,tex.value);
+
+
+            inpu.value = "";
+            tex.value = "";
+            }
+                        }
+                    )
+                }
+                }
+            )
+            
+        
+       
+
+        //let qu = document.getElementById("f");
+        let all = document.getElementById("f1");
+        all.style.display="block";
+        //qu.innerText=subh1;
+       // qu.innerText=subp;
+        //all.appendChild(qu)
+        let g = document.createElement("p");
+        g.style.fontSize = "30px";
+        all.appendChild(g);
+        g.innerText = "Question";
+        //let para = document.getElementById("f1");
+        let a3 = document.createElement("div");
+        a3.style.backgroundColor = "#008080";
+        a3.style.width = "700px";
+        a3.style.height = "90px";
+        all.appendChild(a3);
+        let l = document.createElement("p");
+        let l1 = document.createElement("h1");
+            l1.innerText=subh1;
+            l.innerText=subp;
+        a3.appendChild(l1);
+        a3.appendChild(l);
+
+        console.log(a);
+        //l1.innerText = a.value;
+        l1.style.backgroundColor = "#008080";
+
+        //l.innerText = b.value;
+        let bt = document.createElement("button");
+        bt.innerText = "Resolve";
+        bt.style.marginLeft = "580px";
+        bt.style.marginTop = "50px";
+        bt.style.padding = "10px";
+        all.appendChild(bt);
+
+        var re = document.createElement("p");
+        all.appendChild(re);
+        re.innerText = "Response";
+        re.style.fontSize = "30px";
+        re.style.display = "none";
+
+        var rdiv = document.createElement("div")//response
+        all.appendChild(rdiv);
+        rdiv.style.overflow = "auto";
+        rdiv.style.borderBottomColor = "white";
+        rdiv.style.borderBottom = "10px";
+        rdiv.style.backgroundColor = "#008080";
+        rdiv.style.width = "700px";
+        rdiv.style.height = "90px";
+        rdiv.style.display = "none";
+
+        var listR = document.createElement('ul');
+        rdiv.appendChild(listR);
+
+        let para1 = document.createElement("p");//add response
+        all.appendChild(para1);
+        para1.innerText = "Add Response";
+        para1.style.marginTop = "50px";
+        para1.style.fontSize = "40px";
+        para1.style.fontWeight = "7px";
+
+        let inpu = document.createElement("input");
+        all.appendChild(inpu);
+        inpu.placeholder = "Enter Name";
+        inpu.style.padding = "10px";
+        inpu.id = "in";
+
+        let mbr = document.createElement("br");
+        all.appendChild(mbr);
+        let m2br = document.createElement("br");
+        all.appendChild(m2br);
+
+
+        let tex = document.createElement("textarea");
+        all.appendChild(tex);
+        tex.placeholder = "Enter Comment";
+        tex.id = "com";
+        tex.style.height = "250px";
+        tex.style.width = "950px";
+
+        let sub = document.createElement("button");
+        all.appendChild(sub);
+        sub.id = "s";
+        sub.innerText = "submit";
+        sub.style.padding = "10px";
+        sub.addEventListener("click", function () {
+            console.log("sdfsd")
+            re.style.display = "block";
+            rdiv.style.display = "block";
+         let obj1={
+                id:1,
+                name:inpu.value,
+                comment:tex.value,
+         };
+
+         arr.forEach(element=>{
+            console.log(element.id);
+            console.log(uniqueId);
+            if(element.id==uniqueId){
+                element.response.push(obj1);
+            }
+         })
+         localStorage.setItem("data",JSON.stringify(arr));
+
+            let itemR = document.createElement('li');
+            listR.appendChild(itemR);
+            itemR.style.backgroundColor = "yellow";
+            itemR.style.marginBottom = "20px";
+            itemR.style.color = "black";
+            // let a4 = document.querySelector("#in");
+            // let a5 = document.querySelector("#com");
+            let hello = document.createElement("h1");
+
+            let hello1 = document.createElement("h2");
+            hello.innerText = inpu.value;
+            hello1.innerText = tex.value;
+
+            itemR.appendChild(hello);
+            itemR.appendChild(hello1);
+
+            //saveResponses(inpu.value,tex.value);
+
+
+            inpu.value = "";
+            tex.value = "";
+        })
+    }
+    })
+
+    // function saveResponses(n,c) {
+    //     let obj = {
+    //             id: 1,
+    //             name: n,
+    //             comm: c,
+    //             response: []
+    //         };
+    //         arr.push(obj);
+    //         addLocalItem(arr);
+    // }
+    // function response(){
+
+    // }
+
+    window.onload = function () {
+
+        // console.log("Sdfsdf");
+        arr = JSON.parse(localStorage.getItem("data")) || [];
+        arr.forEach(element => {
+
+            let m = document.getElementById("list");
+            let n = document.createElement("li");
+            n.setAttribute("class", "n");
+            n.setAttribute("id",element.id)
+            m.appendChild(n);
+            let q = document.createElement("p");
+
+            let q1 = document.createElement("h1");
+            q1.style.textAlign = "center";
+            let a = document.querySelector("#i");
+            let b = document.querySelector("#j");
+            n.appendChild(q1);
+            n.appendChild(q);
+            q1.innerText = element.subject;
+            q.innerText = element.text;
+        });
+    }
+</script>
+
+</html>

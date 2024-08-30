@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion portal</title>
+    <link rel="stylesheet" href="ass1.css">
+</head>
+<body>
+    <div id="container">
+        <h1 >Discussion portal</h1>
+        <div id="bottom">
+        <div id="a">
+            <div id="c">
+                <button id="d">New Question Form</button><button id="e">Search Questions.....</button>
+            </div>
+            <!-- <ul>
+
+            </ul> -->
+        </div>
+
+            <div id="f">
+                <div id="mid"><p id="g">Welcome to Discussion portal !</p><br>
+                <p id="h">Enter a subject and question to get started</p> <br><br>
+           <input type="text" id="i" placeholder="Enter Subject...."><br><br>
+           
+           <textarea id="j" placeholder="Enter Questions....." ></textarea>
+       <input type="submit"id="k"></div>
+       </div>
+    </div>
+    </div>
+</body>
+<script>
+    let submit=document.querySelector("#k");
+let sub=document.querySelector("#i");
+let ques=document.querySelector("#j");
+let inp = document.querySelector("#a");
+submit.addEventListener("click",function(){
+    inp.innerHTML+=`<div class="p">
+        <h5>${sub.value}</h5>
+        <p>${ques.value}</p></div>`
+
+})
+let id=document.querySelector("#d");
+let id2=document.querySelector("#mid");
+id.addEventListener("click",function(){
+id2.style.visibility="visible";
+})
+let id3=document.querySelector("");
+let id4=document.querySelector("#mid");
+id3.addEventListener("click",function(){
+    id4.style.visibility="hidden";
+
+
+})
+
+    // let a=document.querySelector("#k");
+    // let ul=document.querySelector("ul");
+    // a.addEventListener("click",function(){
+    //     let i=document.querySelector("#i");
+    //     let j=document.querySelector("#j");
+    //     let li=document.createElement("li");
+    //     //  li.innerHTML=i.value;
+    //     ul.append(li);
+    //     let h1=document.createElement("h1");
+    //     li.append(h1);
+    //     h1.innerHTML=i.value;
+    //     li.style.backgroundColor="white";
+         
+    //     let p=document.createElement("p");
+    //     li.append(p);
+    //     p.innerHTML=j.value;
+
+
+    // })
+</script>
+</html>

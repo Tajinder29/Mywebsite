@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-do list</title>
+<style>
+body{
+background-color: white;
+}
+#div1{
+   background-color: whitesmoke;
+   height:400px;
+   width:600px;
+   margin-left:80vh;
+   margin-top:30vh;
+ 
+        }
+        #heading{
+            margin-left:200px;
+        }
+        #in{
+            margin-left:100px;
+             padding:30px 90px 20px 40px;
+        }
+        #add{
+            padding:20px;
+            background-color: rgba(172, 255, 47, 0.797);
+        }
+        #list{
+            justify-content: center;
+            font-family:cursive;
+            font-size:30px;
+            margin-left:10vh;
+            list-style-type: circle ;
+            color:rgba(0, 128, 0, 0.918); 
+              
+        }
+        #div2{
+            height:300px;
+            width:600px;
+            overflow: auto;
+           scrollbar-width: none;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+<h1 id="heading">To-Do List</h1>
+<input type="text" id="in" placeholder="Add a new task...">
+<button id="add">Add Task</button>
+<div id="div2">
+    <ul id="list">
+      
+    </ul>
+</div>
+</div>  
+</body>
+<script>
+    let list=document.getElementById("list");
+    let input=document.getElementById("in");
+    let addtask=document.getElementById("add");
+    let taskdiv=document.getElementById("div2");
+    addtask.addEventListener("click",function(){
+        click();
+    })
+
+    function click(){
+        if(input.value==""){
+            alert("Please Fill the Taskbox");
+            // button.innerHTML="";
+        }
+        else{
+             let li=document.createElement("li");
+         let span=document.createElement("button");
+         let com=document.createElement("button");
+        let edit=document.createElement("button");
+        li.innerHTML=input.value;
+        list.appendChild(li);
+        span.id="but";
+        span.innerHTML='delete';
+        // span.style.position="static";
+         span.style.marginLeft="250px";
+         com.innerHTML="Complete";
+        edit.innerHTML="Edit";
+        com.id="comp";
+        edit.id="edit1";
+    li.appendChild(span);
+    li.appendChild(com);
+    li.appendChild(edit);
+        }
+        // div2.appendChild(list);
+        input.value="";
+        savedata();
+    }
+list.addEventListener("click",(element)=>{
+    if( element.target.tagName=="LI"){
+        savedata();
+    }
+    else if(element.target.id=="but"){
+       element.target.parentElement.remove();
+       savedata();
+
+    }
+    else if(element.target.id=="comp"){
+       li.innerHTML.style.textDecoration="line-through";
+        savedata();
+    }
+   else if(element.target.id=="edit1"){
+    input.innerHTML=li.innerHTML;
+   }
+
+})
+function savedata(){
+    localStorage.setItem("li",list.innerHTML);
+}
+function display(){
+    list.innerHTML=localStorage.getItem("li");
+}
+display();
+</script>
+</html>

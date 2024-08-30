@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+
+    <p class="a">kh</p><p class="a">jkjk</p><p class="a">abc</p>
+    <script>
+    const b=document.getElementsByClassName("a");
+   console.log(b);
+   console.log(b[0]);
+   console.log(b[1]);
+   console.log(b[2]);
+
+   b[0].innerHTML="para1";
+   b[1].innerHTML="para1";
+   b[2].innerHTML="para1";
+
+b[0].innerHTML=b[0].innerHTML+"hello";
+    </script>
+</body>
+</html>

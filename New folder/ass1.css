@@ -1,0 +1,173 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#discussion{
+
+    height: 60px;
+    width: 100%;
+    background-color: #008080;
+    margin-bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+display:flex;
+gap:20px;
+flex-direction: column;
+width:100vw;
+}
+
+ #l {
+font-size:40px;
+ text-align:center; 
+background-color:#008080;
+color:white;
+}
+#bottom{
+display:flex;
+gap:30px;
+width:100vw;
+justify-content: space-between;
+}
+
+#bottom #a{
+width:50vw;
+background-color: #008080;
+}
+#bottom #f{
+width:50vw;
+height: 50vw;
+background-color: white;
+margin-top: 100px;
+}
+
+#bottom #a #c{
+background-color: white;
+padding:30px;
+
+}
+#bottom #a #c #d {
+font-size:30px;
+border:3px solid #008080;
+}
+#bottom #a #c #e{
+font-size:30px;
+margin-left:50px;
+border:3px solid #008080;
+}
+#f{
+padding:30px;
+/* display:block; */
+}
+#f #g{
+font-size:50px;
+}
+#f #h{
+font-size:20px;
+}
+#f #i{
+padding:30px 40px 30px ;
+border:3px solid #008080;
+
+
+}
+#f #j{
+padding:80px 100px 80px 80px;
+border:3px solid #008080;
+}
+#k{
+position:absolute;
+top:650px;
+left:66vw;
+padding:7px;
+}
+.p{
+background-color: white;
+margin-top:50px;
+padding :40px;
+}
+.p h5{
+font-size:30px;
+margin-left:300px;
+
+}
+.p p{
+font-size:xx-large;
+}
+#mid {
+    display: none;
+}
+#list{
+    list-style-type: none;
+    
+}
+#list1{
+    list-style-type: none;
+    background-color:#008080;
+}
+.n{
+    margin-top:50px;
+    background-color: white;
+    padding:20px;
+}
+#pa{
+    text-align: center;
+}
+#resdiv{
+    border-bottom: 30px;
+    border-color: white;;
+    margin-bottom: 5px;
+}
+#f1{
+    display:none;
+
+}
+#f1 #pi {
+    font-Size : 30px;
+}
+ #div2{
+    background-color: #008080;
+   
+        width:700px;
+    height : 90px;
+}
+#b1{
+  margin-left :580px;
+    margin-top : 50px;
+    padding : 10px;
+}
+#p3{
+    
+   font-size : 30px;
+   /* display : "none"; */
+}
+ #div3{
+    overflow :auto;
+    border-Bottom-color :white;
+border-Bottom :10px;
+   background-color : #008080;
+   width : 700px;
+  height : 90px;
+    /* display : none; */
+}
+#p4{
+   margin-Top : 50px;
+    font-Size : 40px;
+    font-Weight : 7px;
+}
+#inp{
+    padding : 10px;
+}
+#texta{
+    height :250px;
+    width : 950px;
+}
+#but{
+    padding : 10px;
+}
+
+

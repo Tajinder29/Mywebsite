@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <h1 id="heading">Discussion Portal</h1>
+    <div id="parent">
+        <div id="first" class="shape">
+            <div id="upperportion">
+                <button id="but1" class="pos" type="button"> New Question Form</button>
+                <button id="but2" class="pos" type="button"> Search Question</button>
+            </div>
+            <ul id="list1">
+                
+            </ul>
+        </div>
+        <div id="second" class="shape">
+            <div id="child1" class="innerchild1">
+                <h1>Welcome to Discussion Portal!</h1>
+                <p>Enter a subject and question to get started</p>
+                <input type="text" placeholder="Enter Subject..." id="inp"><br><br>
+                <textarea name="fortext" id="textarea" placeholder="Enter Question..."></textarea><br><br>
+                <button type="submit" id="submitbutton1">Submit</button>
+            </div>
+            <div id="child2" class="innerchild1">
+                <h3>Question</h3>
+                <div id="forquestion">
+                    <p id="que1"></p>
+                    <p id="que2"></p>
+                </div>
+                <div id="forresponce">
+                    <h3>Response</h3>
+                    <div id="inside1">
+                        <ul id="list2">
+
+                        </ul>
+                    </div>
+                </div>
+                <h3>Add Response</h3>
+                <input type="text" placeholder="Enter Name" id="inp2"><br>
+                <Textarea placeholder="Enter Comments" id="textarea2"></Textarea><br>
+                <button type="submit" id="submitbutton2">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="web.js"></script>
+</body>
+</html>

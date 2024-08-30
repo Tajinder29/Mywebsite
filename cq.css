@@ -1,0 +1,81 @@
+#p{
+    margin-left: 55px;
+    position:absolute;
+    top: 0px;
+    font-size: xx-large;
+}
+#n{
+    background-image: url(https://codequotient.com/images/landing/2024/background-wave.svg);
+ background-repeat: no-repeat;
+ background-position:left;
+ background-color:whitesmoke;
+ 
+}
+a{
+    text-decoration: none;
+    color:black;
+    margin-left: 200px;
+    font-size: x-large;
+}
+#h{
+    margin-left: 1050px;
+}
+#k{
+    margin-left: 150px;
+    margin-top: 350px;
+    font-size: 50px;
+    font-family: Avenir;
+}
+#l{
+    margin-left: 1500px;
+    position:absolute;
+    top:200px;
+}
+#g{
+    font-size: xx-large;
+    padding:40px;
+    margin-left: 150px;
+    background-color: rgb(222, 104, 52);
+    color:white;
+    border-radius: 10px;
+    border-color: white;
+}
+#t{
+    
+    color: black;
+    margin-left: 590px;
+    font-family: Avenir Book;
+    font-size: 70px;
+}
+#w{
+    
+    position:relative;
+    top:200px;
+    background-image: url(https://codequotient.com/images/landing/2024/background-wave.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    
+    
+}
+#v{
+    margin-left: 350px;
+}
+#s{
+    display:flex;
+}
+#d{
+    font-size: 50px;
+    position:relative;
+    top:500px;
+    margin-left: 800px;
+    font-family: "Avenir", sans-serif;
+}
+#id{
+    font-family: "Avenir", sans-serif;
+    font-size: 50px;
+    position:relative;
+    top:500px;
+    margin-left: 500px;
+
+}

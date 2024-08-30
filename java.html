@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>output</h1>
+    <button ONclick="window.print()"id="button">GCD</button>
+    <script>
+ document.getElementById("button").addEvent;
+        let a=prompt("enter a number");
+        let b=prompt("enter other number");
+        let r=function msg(){
+            let min=(a<b)?a:b;
+            let bi=1;
+
+            for(let i=1;i<min;i++){
+                if(a%i==0&&b%i==0){
+                 bi=i;   
+                }
+            }
+            return bi;
+        }
+        console.log(r());
+        
+        // var note500,note200,note100,note20,note10;
+        // while(n!=0)
+        // {
+        //     if(n>=500)
+        //     {
+                
+        //          note500=n/500;
+        //         console.log("note500", note500);
+        //         n=n%500;
+              
+
+        //     }
+        //      if(n>=200)
+        //     {
+        //          note200=n/200;
+        //         console.log("note200",note200);
+        //         n=n%200;
+        //     }
+        //      if(n>=100)
+        //     {
+        //          note100=n/100;
+        //         console.log("note100",note100);
+        //         n=n%100;
+        //     }
+        //      if(n>=20)
+        //     {
+        //          note20=n/20;
+        //         console.log("note20",note20);
+        //         n=n%20;
+        //     }
+        //      if(n>=10)
+        //     {
+        //          note10=n/10;
+        //         console.log("note10",note10);
+        //         n=n%10;
+        //     }
+            
+        // }
+    
+//     const student={
+// name :"arav",
+// class:"bca-ist",
+// rollno:2345,
+// // msg:function(){
+// //     console.log("hello");//anormous fxn
+// // }
+// msg: function mess(){
+//     console.log("hello");//simple fxn
+// }
+//     };
+//     let x=student;
+//     x.age=22;//objects are mutable they share 
+//     console.log(x);
+//     console.log(student);
+//     console.log(student.msg());
+
+        </script>
+</body>
+</html>

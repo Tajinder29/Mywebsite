@@ -1,0 +1,31 @@
+.checkbox-container{
+    display: block;
+    position: relative;
+    font-size: 25px;
+    padding-left: 20px;
+    font-size: xx-large;
+}
+
+.checkbox-container input{
+    opacity: 0;
+}
+.check{
+    position: absolute;
+    top:3px;
+    
+    height: 20px;
+    width: 24px;
+    left: 0;
+    background-color: yellow;
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+}
+.checkbox-container:hover input~.check{
+    background-color:purple;
+}
+.checkbox-container input:checked ~.check{
+    background-color: blue;
+     background-image: url(https://e7.pngegg.com/pngimages/973/366/png-clipart-check-check-mark-computer-icons-green-tick-miscellaneous-angle.png);
+     background-size: cover;
+     background-repeat: no-repeat;
+}

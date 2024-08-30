@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text editor</title>
+    <style>
+        #select{
+           margin-left:500px;;
+           padding:10px;
+          position:absolute;
+          top:50px;
+        }
+        #div1{
+            margin-top:50px;
+        }
+        #div2{
+            
+            border:1px solid black;
+               }
+        #h3{
+            color:white;
+            margin-left: 10px;
+            margin-top:10px;
+            
+        }
+        #div3{
+            height:200px;
+            width:600px;
+             background-color: orange; 
+            color:white;
+        }
+        #but{
+            margin-top:20px;
+            padding:10px;
+            background-color: yellow;
+            border-radius: 4px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <h1 id="h1">Type Your Code</h1>
+        <select id="select">
+            <option selected>Python</option>
+            <option>Javascript</option>
+            <option>C</option>
+            <option>C++</option>
+            <option>Java</option>
+        </select>
+    </div>
+    <textarea id="div2" cols="80" rows="30" placeholder=" #write your code" >
+       
+      
+    </textarea>
+    <div id="div3">
+        <h3 id="h3">OUTPUT:</h3>
+    </div>
+    <button id="but">Compile</button>
+    <script src="editor.js"></script>
+
+</body>
+</html>
+<!-- console.log("hjkhd"); -->

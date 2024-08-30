@@ -1,0 +1,90 @@
+#heading{
+    margin-top: 0px;
+    text-align: center;
+    background-color: #134040;
+    color: aliceblue;
+    font-family:serif;
+    
+}
+#first{
+    height: 500px;
+    background-color: #134040;
+    overflow: auto;
+}
+#parent{
+    width: 1200px;
+   height: 500px;
+    border: 1px solid black;
+    position: absolute;
+    top:44px;
+    display: flex;
+}
+#list1{
+    padding: 0px;
+}
+li{
+    list-style-type: none;
+    background-color: #e2fefe;
+}
+.shape{
+    height: 480px;
+    width:590px;
+    border: 1px solid black;
+}
+#second{
+    padding: 10px;
+    /* display: none; */
+   
+}
+/* .innerchild1{
+    border: 1px solid black;
+    
+} */
+#textarea{
+    width: 500px;
+    height: 250px;
+}
+#submitbutton1{
+    margin-left: 450px;
+    background-color: #134040;
+    color: aliceblue;
+}
+#child2{
+    padding: 10px;
+    display: none;
+}
+#child1{
+    padding: 10px;
+    display: none;
+}
+#upperportion{
+    width:590px;
+    height: 80px;
+    background-color:#e2fefe;
+}
+.pos{
+    margin-left: 100px;
+    margin-top:30px;
+}
+#textarea2{
+    width: 510px;
+    height: 110px;
+}
+#forquestion{
+    width:570px;
+    height: 70px;
+    background-color: #134040;
+    color:#e2fefe;
+}
+#forresponce{
+    width:570px;
+    height: 100px;
+    /* display: none; */
+    /* border: 1px solid black; */
+}
+#inside1{
+    width:570px;
+    height: 60px;
+    background-color: #b5dede;
+    overflow: auto;
+}

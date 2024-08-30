@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion</title>
+    <link rel="stylesheet" href="ass1.css">
+</head>
+
+<body>
+<div id="Discussion">
+<h1 id="l">Discussion portal</h1>
+    </div>
+    <div id="container">
+        <div id="bottom">
+            <div id="a">
+                <div id="c">
+                    <button id="d">New Question Form</button><button id="e">Search Questions.....</button>
+                </div>
+                <ul id="list">
+
+                </ul>
+            </div>
+            <div id="f">
+                <div id="mid">
+                    <p id="g">Welcome to Discussion portal !</p><br>
+                    <p id="h">Enter a subject and question to get started</p><br><br>
+                    <input type="text" id="i" placeholder="Enter Subject...."><br><br>
+                    <textarea id="j" placeholder="Enter Questions....."></textarea>
+                    <input type="submit" id="k">
+                    
+                </div>
+                <div id="f1">
+                    
+                    <p id="pi">Question</p>
+                    <div id="div2">
+                        <p id="pi1"></p>
+                        <h1 id="hi1"></h1>
+                    </div>
+                    <button id="b1">Resolve</button>-
+
+   <div id="div5">
+    
+        <p id="p3">Response</p>
+        <div id="div3">
+        <ul id="ul1">   
+            <!-- <li id="">
+                <h1 id=""></h1>
+                <h2 id=""></h2>
+            </li> -->
+        </ul>
+    </div>
+   </div>
+
+<div id="form">
+        <p id="p4">Add Response</p>
+        <input type="text" id="inp" placeholder="Enter Name"><br><br>
+        <textarea id="texta" placeholder="Enter comment"></textarea>
+        <button id="but" >Submit</button>
+    </div>
+
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let arr = [];
+    let count=localStorage.getItem("count")||"0";
+    function setItem(count){
+        return (localStorage.setItem("count",count ));
+    }
+    let a = document.querySelector("#i");
+
+let b = document.querySelector("#j");
+
+    function addLocalItem(arr) {
+        return (localStorage.setItem("data", JSON.stringify(arr)));
+    }
+
+    
+    let btn = document.querySelector("#d");//newquestion form
+    let visi = document.querySelector("#mid");
+    btn.addEventListener("click", function () {
+        console.log(visi);
+        visi.style.display = "block";
+        document.getElementById("f1").style.display = "none";
+
+    })
+
+    let k = document.getElementById("k");
+    k.addEventListener("click", function () {//submit
+        let i = document.getElementById("i");
+        let j = document.getElementById("j");
+        if (i.value === "" || j.value === "") {
+            alert("fill all input box");
+        }
+        else {
+            let obj = {
+                id: count,
+                subject: i.value,
+                text: j.value,
+                response: []
+            };
+            count++;
+            setItem(count);
+            
+            arr.push(obj);
+            addLocalItem(arr);
+          
+            let m = document.getElementById("list");
+            let n = document.createElement("li");
+
+            n.setAttribute("id", count);
+           n.setAttribute("class","n");
+
+            m.appendChild(n);
+            let q = document.createElement("p");
+
+            let q1 = document.createElement("h1");
+            q1.style.textAlign = "center";
+            let a = document.querySelector("#i");
+            let b = document.querySelector("#j");
+            n.appendChild(q1);
+            n.appendChild(q);
+            q1.innerText = a.value;
+            q.innerText = b.value;
+
+
+        }
+    })
+    let per = document.querySelector("#list");
+    let uniqueId=null;
+    per.addEventListener("click", function (event) {
+        visi.style.display = "none";
+        document.getElementById("f1").style.display = "block";
+
+        console.log(event.target.parentNode.id);
+
+        if(event.target.parentNode.tagName=="LI" && event.target.parentNode.classList.contains("n")){
+            // document.getElementById("f1").innerHTML="";
+            uniqueId=event.target.parentNode.id;
+            console.log(uniqueId)
+            
+            let subh1 = event.target.parentNode.childNodes[0].innerText;
+            let subp = event.target.parentNode.childNodes[1].innerText;
+            console.log(subh1,subp);
+         let pi=document.getElementById("pi1");
+         let hi=document.getElementById("hi1");
+         pi.innerHTML=subh1;
+         hi.innerHTML=subp;
+       
+
+        }
+
+            var arr1=JSON.parse(localStorage.getItem("data"));//resp
+            document.getElementById("ul1").innerHTML="";
+            arr1.forEach(element=>{
+                if(uniqueId==element.id){
+                    console.log("sdfsdf");
+                    
+                    element.response.forEach(element=>{
+                        let li2=document.createElement("list");
+                        let para8=document.createElement("p");
+                        let para9=document.createElement("h1");
+                        li2.appendChild(para8);
+                        li2.appendChild(para9);
+                        document.getElementById("ul1").appendChild(li2);
+                        para8.innerText=element.name;
+                    para9.innerText=element.comment;
+                    })
+                
+            }
+        })
+
+           
+                })
+            
+        
+       
+
+    
+
+    let sub=document.getElementById("but");
+    sub.addEventListener("click", function () {
+        let input=document.getElementById("inp");
+        let textar=document.getElementById("texta");
+
+         let obj1={
+                id:1,
+                name:input.value,
+                comment:textar.value,
+         };
+var ulist=document.getElementById("ul1");//response
+let I=document.createElement("h1");
+let H=document.createElement("p");
+ulist.appendChild(I);
+ulist.appendChild(H);
+I.innerHTML=input.value;
+H.innerHTML=textar.value;
+         
+         
+         arr = JSON.parse(localStorage.getItem("data"))//resp
+         arr.forEach(element=>{
+            console.log(element.id,"id");
+            console.log(uniqueId,"unique");
+            if(element.id==uniqueId){
+                console.log("Hello")
+                console.log(element.response);
+                element.response.push(obj1);
+            }
+        })
+        localStorage.setItem("data",JSON.stringify(arr));
+    
+         })
+
+    window.onload = function () {
+
+        // console.log("Sdfsdf");
+        arr = JSON.parse(localStorage.getItem("data")) || [];
+        arr.forEach(element => {
+
+            let m = document.getElementById("list");
+            let n = document.createElement("li");
+            n.setAttribute("class", "n");
+            n.setAttribute("id",element.id)
+            m.appendChild(n);
+            let q = document.createElement("p");
+
+            let q1 = document.createElement("h1");
+            q1.style.textAlign = "center";
+            let a = document.querySelector("#i");
+            let b = document.querySelector("#j");
+            n.appendChild(q1);
+            n.appendChild(q);
+            q1.innerText = element.subject;
+            q.innerText = element.text;
+        });
+    }
+</script>
+
+</html>

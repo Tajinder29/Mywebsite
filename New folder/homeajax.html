@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homeajax</title>
+</head>
+<body>
+    
+    <button id="ab">About</button>
+</body>
+<script>
+    let inp=document.getElementById("ab");
+    inp.addEventListener("click",function(){
+        let b=new XMLHttpRequest();
+        b.open("GET","./aboutajax.html");
+        b.send();
+        b.onload=function(){
+             document.body.innerHTML=document.body.innerHTML+b.responseText;
+            console.log(b.responseText);
+        }
+    })
+    </script>
+</html>

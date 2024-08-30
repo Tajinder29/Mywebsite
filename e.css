@@ -1,0 +1,27 @@
+#imp{
+    background-color: black;
+  height:700px;
+ width:700px;
+ border:2px solid black;
+}
+#l{
+    color:aliceblue;
+    margin-top:20px;
+}
+#y{
+   height:30px;
+   width:650px;
+}#a{
+    height:100px;
+   width:650px;  
+}
+#u{
+
+position:absolute;
+top:620px;
+right: 1550px;
+}
+#c{
+    background-color:blue;
+    padding:10px;
+}

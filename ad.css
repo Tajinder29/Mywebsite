@@ -1,0 +1,47 @@
+
+#v{
+    position :absolute;
+    left:450px;
+    top:0px;
+    font-size:60px;
+}
+#a{
+    position :absolute;
+    background-color:yellowgreen;
+    height:70px;
+    width:1580px;
+    /* margin-left: 150px;
+     */
+    
+}
+#c{
+    position: relative;
+    top:100px;
+margin-left: 50px;
+}
+#f{
+    padding: 15px;
+     margin-left:50px; 
+ width:350px;
+}
+#z{
+    height: 80px;
+     margin-left:50px; 
+ width:50%;
+}
+.v{
+  
+    margin-left: 300px;
+}
+#m{
+   margin-left: 50px; 
+}
+#n{
+    padding:10px;
+}
+#s{
+background-color: yellowgreen;
+border:white;padding:20px;
+border-radius: 5px;
+color:white;
+}

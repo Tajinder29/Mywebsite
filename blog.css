@@ -1,0 +1,91 @@
+#a{
+    
+  
+height:3000px;
+width:3050px;
+    
+    background-image: url("https://img.freepik.com/free-photo/assortment-leaves-flowers-dark-background_24972-2156.jpg");
+   background-size: 100%;
+    background-repeat: no-repeat;
+
+} 
+nav #b{
+    position: absolute;
+    left:150px;
+    top:0px;
+    color:white;
+    
+    font-size:xx-large;
+}
+#c{
+    position: absolute;
+    left:550px;
+    top:10px;
+    text-decoration: none;
+    color:white;
+    font-size:xx-large
+}
+#d{
+    position: absolute;
+    left:700px;
+    top:10px;
+    text-decoration: none;
+    color:white;
+    font-size:xx-large
+}
+#e{
+    position: absolute;
+    left:900px;
+    top:10px;text-decoration: none;
+    color:white;
+    font-size:xx-large
+}
+#f{
+    position: absolute;
+    left:1070px;text-decoration: none;
+    top:10px;
+    color:white;
+    font-size:xx-large
+}
+#g{
+    position:absolute;
+    left:900px;
+    top:100px;
+}
+#h{
+    color:whitesmoke;
+    font-size:60px;
+}
+#i{
+    color:whitesmoke;
+    font-size:30px;
+}
+#j{
+    color:black;
+    background-color: whitesmoke;
+    border:white;
+    border-radius: 5px;
+    padding:20px;
+}
+#k{
+    position:absolute;
+     left:800px; 
+    top:500px;  
+}
+#l{
+    color:white;
+    font-size:30px;
+}
+
+#m{
+    margin-left:50px;
+    margin-top:900px;
+}
+#n{
+    margin-left: 800px;
+}
+#o{
+    color:white;
+    font-size:30px;
+    margin-left: 800px;
+}

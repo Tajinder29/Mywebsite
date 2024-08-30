@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tajinder</title>
+    <style>div{
+        height: 100px;
+        width: 100px;
+        border:1px solid black;
+        margin: 20px;
+    }</style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div1"> </div>
+    <div id="div1"> </div>
+    <span class="change">hlo</span>
+    <span class="change">hii</span>
+    <span class="change">bye</span>
+    <span class="change">bye!</span><br><br>
+    <button onclick="change()">Change Div Color</button>
+    <button onclick="change2()">Change Spane Color</button>
+    <script>
+        function change()
+        {
+        let a = document.querySelectorAll("#div1");
+        for (let i = 0; i < a.length; i++) {
+        a[i].style.backgroundColor = "green";
+        }
+        }
+        function change2()
+        {
+        let a = document.querySelectorAll(".change");
+        for (let i = 0; i < a.length; i++) {
+        a[i].style.backgroundColor = "blue";
+        }
+        }
+       </script>
+</body>
+</html>
