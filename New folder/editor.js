@@ -26,6 +26,7 @@ compile.addEventListener("click",function(){
            if(obj.code.trim()===""){
               output.innerHTML=resp.error;
             document.getElementById("btn").disabled=false;
+            return;
         }
             if(obj.langId==0){
                  output.innerHTML=resp.error;
