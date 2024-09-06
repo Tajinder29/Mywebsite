@@ -26,7 +26,6 @@ compile.addEventListener("click",function(){
            if(obj.code.trim()===""){
               output.innerHTML=resp.error;
             document.getElementById("btn").disabled=false;
-            return;
         }
             if(obj.langId==0){
                  output.innerHTML=resp.error;
@@ -35,16 +34,9 @@ compile.addEventListener("click",function(){
                 call=setInterval(() => {
                     codeid(resp.codeId,call);
                  },1000); 
-            }
-             
+            }    
         }
-    
-       }
-
-      
-       
-       
-   
+       }   
 })
 
 let codeid=(codeId)=>{
@@ -57,25 +49,24 @@ let codeid=(codeId)=>{
             console.log(ob);
             let data=JSON.parse(ob.data);
             console.log(data);
-            if(data.output!=" "){
-                console.log(data.output);
-               document.getElementById("div3").innerHTML=data.output;
-            }
+            //if(data.output!=" "){
+              //  console.log(data.output);
+               //document.getElementById("div3").innerHTML=data.output;
+            //}
             
-            if(data.hasOwnProperty("langId")){
+            if(data.hasOwnProperty("langid")){
                 clearInterval(call);
                 if(data.errors!="")
                     {
-                        document.getElementById("div2").innerHTML=data.errors;
+                        document.getElementById("div3").innerHTML=data.errors;
                         document.getElementById("btn").disabled = false;
                     }
         
                     else{
-                        document.getElementById("div2").innerHTML=data.output;
+                        document.getElementById("div3").innerHTML=data.output;
                         document.getElementById("btn").disabled = false;
                     }
             }
-            console.log(data);
             
         }
     }
