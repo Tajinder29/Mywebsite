@@ -23,9 +23,14 @@ compile.addEventListener("click",function(){
             
             let resp=JSON.parse(request.responseText);
             console.log(resp);  
+           if(obj.code.trim()===""){
+              output.innerHTML=resp.error;
+            document.getElementById("btn").disabled=false;
+        }
+            if(obj.langId==0){
+                 output.innerHTML=resp.error;
+                document.getElementById("btn").disabled=false;}
             if(resp.hasOwnProperty("codeId")){
-               
-
                 call=setInterval(() => {
                     codeid(resp.codeId,call);
                  },1000); 
@@ -58,6 +63,16 @@ let codeid=(codeId)=>{
             
             if(data.hasOwnProperty("langId")){
                 clearInterval(call);
+                if(data.errors!="")
+                    {
+                        document.getElementById("div2").innerHTML=data.errors;
+                        document.getElementById("btn").disabled = false;
+                    }
+        
+                    else{
+                        document.getElementById("div2").innerHTML=data.output;
+                        document.getElementById("btn").disabled = false;
+                    }
             }
             console.log(data);
             
